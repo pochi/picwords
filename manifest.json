@@ -1,11 +1,11 @@
 {
-  "name": "optimize train",
-  "description": "通勤時間を効率化するプラグイン",
+  "name": "picwords",
+  "description": "単語を記憶するためのプラグイン",
   "manifest_version": 2,
-  "version": "0.1.1",
+  "version": "0.1.0",
   "browser_action": {
     "default_icon": "icon.png",
-    "default_title": "通勤時間",
+    "default_title": "Picwords",
     "default_popup": "popup.html"
   },
   "icons": {
@@ -16,11 +16,8 @@
     "persistent": false
   },
   "content_scripts":[{
-    "matches": ["http://*/*", "https://*/*"],
-    "js":["jquery.min.js"]
-  }],
-  "permissions": [
-    "alarms",
-    "http://transit.loco.yahoo.co.jp/"
-  ]
+    "matches": ["http://ejje.weblio.jp/*"],
+    "js":["jquery.min.js", "picwords.js"],
+    "run_at": "document_end"
+  }]
 }
