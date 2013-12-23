@@ -1,8 +1,8 @@
 {
-  "name": "picwords",
+  "name": "capwords",
   "description": "単語をストレスなく覚えるためのプラグイン",
   "manifest_version": 2,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "browser_action": {
     "default_icon": "icon.png",
     "default_title": "登録",
@@ -10,7 +10,7 @@
   },
   "content_scripts":[{
     "matches": ["http://*/*"],
-    "js": ["jquery.min.js", "picwords.js"],
+    "js": ["jquery.min.js", "capwords.js"],
     "run_at": "document_end"
   }],
   "icons": {
